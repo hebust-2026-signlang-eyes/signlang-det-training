@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-一个适用于在 Kaggle 中训练通用动态手语特征编码器的开源项目，完整流程封装在可独立运行的 Notebook 中。
+一个适用于在 Kaggle 中训练通用动态手语特征编码器的开源项目，完整流程封装在可独立运行的 Notebook 中，训练结果可无缝适用于 [SignLang Eyes](https://github.com/hebust-2026-signlang-eyes/signlang-eyes)。
 
 ## 项目简介 🚀
 
@@ -10,7 +10,7 @@
 
 训练期间使用的分类头只提供辅助监督，不会包含在最终导出的编码器中，也不会限制推理阶段可使用的手语词表。
 
-项目中使用的识别思路思路深受 [Google - Isolated Sign Language Recognition](https://www.kaggle.com/competitions/asl-signs) 竞赛第一名作品 [https://www.kaggle.com/competitions/asl-signs/writeups/hoyeol-sohn-1st-place-solution-1dcnn-combined-with]() 启发。
+项目中使用的识别思路思路深受 [Google - Isolated Sign Language Recognition](https://www.kaggle.com/competitions/asl-signs) 竞赛第一名作品 [https://www.kaggle.com/competitions/asl-signs/writeups/hoyeol-sohn-1st-place-solution-1dcnn-combined-with](https://www.kaggle.com/competitions/asl-signs/writeups/hoyeol-sohn-1st-place-solution-1dcnn-combined-with) 启发。
 
 完整流程见 [signlang_det_kaggle_training.ipynb](signlang_det_kaggle_training.ipynb)。
 
@@ -127,8 +127,9 @@ Kaggle CD 会将 PT 转为 ONNX 和 RKNN。三个模型、`model-manifest.json` 
 
 ## 鸣谢 🙏
 
-- 感谢 [hoyso48](https://www.kaggle.com/hoyso48) 在 [https://www.kaggle.com/competitions/asl-signs/writeups/hoyeol-sohn-1st-place-solution-1dcnn-combined-with]() 中提供的宝贵的思路。
+- 感谢 [hoyso48](https://www.kaggle.com/hoyso48) 在 [https://www.kaggle.com/competitions/asl-signs/writeups/hoyeol-sohn-1st-place-solution-1dcnn-combined-with](https://www.kaggle.com/competitions/asl-signs/writeups/hoyeol-sohn-1st-place-solution-1dcnn-combined-with) 中提供的宝贵的思路。
 - 感谢 [Google - Isolated Sign Language Recognition](https://www.kaggle.com/competitions/asl-signs/data) 竞赛的组织者和贡献者通过 Kaggle 提供源语料。
+- 感谢 Microsoft 公司提供的 [ASL Citizen](https://www.microsoft.com/en-us/research/project/asl-citizen/) 数据集。
 - 感谢 [Abdelrhman Karam](https://www.kaggle.com/abdelrhmankaram) 发布用于目标领域适配的 [ASL-preprocessing 7 output](https://www.kaggle.com/code/abdelrhmankaram/asl-preprocessing-7/output)。
 
 所有数据仍受其原始许可证、竞赛规则和使用条款约束。

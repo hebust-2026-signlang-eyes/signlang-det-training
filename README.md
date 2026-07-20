@@ -2,7 +2,8 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-Training workflow for a reusable dynamic sign language feature encoder, packaged as a self-contained notebook designed to run on Kaggle.
+Training workflow for a reusable dynamic sign language feature encoder, packaged as a self-contained notebook designed to run on Kaggle, 
+The training results can be seamlessly applied to [SignLang Eyes](https://github.com/hebust-2026-signlang-eyes/signlang-eyes).
 
 ## Overview 🚀
 
@@ -10,7 +11,7 @@ This project trains `signlang_det`, a lightweight hand-motion encoder for protot
 
 The temporary classification heads are used only for optimization. They are not included in the exported encoder and do not restrict the vocabulary used at inference time.
 
-The recognition approach used in this project was heavily inspired by the 1st solution of the [Google - Isolated Sign Language Recognition](https://www.kaggle.com/competitions/asl-signs) competition: [https://www.kaggle.com/competitions/asl-signs/writeups/hoyeol-sohn-1st-place-solution-1dcnn-combined-with]()
+The recognition approach used in this project was heavily inspired by the 1st solution of the [Google - Isolated Sign Language Recognition](https://www.kaggle.com/competitions/asl-signs) competition: [https://www.kaggle.com/competitions/asl-signs/writeups/hoyeol-sohn-1st-place-solution-1dcnn-combined-with](https://www.kaggle.com/competitions/asl-signs/writeups/hoyeol-sohn-1st-place-solution-1dcnn-combined-with)
 
 The complete workflow is available in [signlang_det_kaggle_training.ipynb](signlang_det_kaggle_training.ipynb).
 
@@ -128,8 +129,9 @@ Keep the encoder fingerprint and `hand168-temporal` preprocessing identifier wit
 
 ## Acknowledgements 🙏
 
-- Thanks to [hoyso48](https://www.kaggle.com/hoyso48) for the valuable insights shared at [https://www.kaggle.com/competitions/asl-signs/writeups/hoyeol-sohn-1st-place-solution-1dcnn-combined-with]().
+- Thanks to [hoyso48](https://www.kaggle.com/hoyso48) for the valuable insights shared at [https://www.kaggle.com/competitions/asl-signs/writeups/hoyeol-sohn-1st-place-solution-1dcnn-combined-with](https://www.kaggle.com/competitions/asl-signs/writeups/hoyeol-sohn-1st-place-solution-1dcnn-combined-with).
 - Thanks to the organizers and contributors of the [Google - Isolated Sign Language Recognition](https://www.kaggle.com/competitions/asl-signs/data) competition for making the source corpus available through Kaggle.
+- Thanks to Microsoft for providing the [ASL Citizen](https://www.microsoft.com/en-us/research/project/asl-citizen/) dataset.
 - Thanks to [Abdelrhman Karam](https://www.kaggle.com/abdelrhmankaram) for publishing the [ASL-preprocessing 7 output](https://www.kaggle.com/code/abdelrhmankaram/asl-preprocessing-7/output) used for target-domain adaptation.
 
 The datasets remain subject to their original licenses, competition rules, and usage terms.
