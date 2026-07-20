@@ -10,6 +10,8 @@
 
 训练期间使用的分类头只提供辅助监督，不会包含在最终导出的编码器中，也不会限制推理阶段可使用的手语词表。
 
+项目中使用的识别思路思路深受 [Google - Isolated Sign Language Recognition](https://www.kaggle.com/competitions/asl-signs) 竞赛第一名作品 [https://www.kaggle.com/competitions/asl-signs/writeups/hoyeol-sohn-1st-place-solution-1dcnn-combined-with]() 启发。
+
 完整流程见 [signlang_det_kaggle_training.ipynb](signlang_det_kaggle_training.ipynb)。
 
 项目也支持交付带 Tag 的版本：Kaggle CD 会把排队的 Tag 依次提交到同一个稳定 Kaggle Notebook；训练完成后，由仓库写入者通过锁定的 Issue 上传 ZIP。Issue workflow 会按顺序验证并转换候选包，再发布对应的 GitHub Release。配置和故障恢复方法见 [Kaggle 持续交付说明](docs/KAGGLE_CD.md)。
@@ -125,7 +127,9 @@ Kaggle CD 会将 PT 转为 ONNX 和 RKNN。三个模型、`model-manifest.json` 
 
 ## 鸣谢 🙏
 
-感谢 [Google - Isolated Sign Language Recognition](https://www.kaggle.com/competitions/asl-signs/data) 竞赛的组织者和贡献者通过 Kaggle 提供源语料。感谢 [Abdelrhman Karam](https://www.kaggle.com/abdelrhmankaram) 发布用于目标领域适配的 [ASL-preprocessing 7 output](https://www.kaggle.com/code/abdelrhmankaram/asl-preprocessing-7/output)。
+- 感谢 [hoyso48](https://www.kaggle.com/hoyso48) 在 [https://www.kaggle.com/competitions/asl-signs/writeups/hoyeol-sohn-1st-place-solution-1dcnn-combined-with]() 中提供的宝贵的思路。
+- 感谢 [Google - Isolated Sign Language Recognition](https://www.kaggle.com/competitions/asl-signs/data) 竞赛的组织者和贡献者通过 Kaggle 提供源语料。
+- 感谢 [Abdelrhman Karam](https://www.kaggle.com/abdelrhmankaram) 发布用于目标领域适配的 [ASL-preprocessing 7 output](https://www.kaggle.com/code/abdelrhmankaram/asl-preprocessing-7/output)。
 
 所有数据仍受其原始许可证、竞赛规则和使用条款约束。
 
